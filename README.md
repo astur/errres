@@ -1,6 +1,6 @@
 # errres
 
-errres description here
+Makes promise from (err, res) pair. Сonsider this as a [unthen](https://github.com/astur/unthen) vice versa.
 
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-image]][npm-url]
@@ -15,6 +15,9 @@ npm i errres
 
 ```js
 const errres = require('errres');
+
+errres(new Error()).catch(e => console.log(e));
+errres(null, 'TEST').then(r => console.log(r))
 ```
 
 ## License
